@@ -1,0 +1,128 @@
+$desktop-min: 960px; // desktop start
+$desktop-max: 1200px; // large monitors, not really "max"
+$tablet-min: 768px; // tablet start
+$tablet-max: 1366px; // tablet end, includes iPad Pro
+$mobile-max: $desktop-min - 1; // all mobile, including tablet
+$mobile-landscape-min: 568px; // mobile landscape mode min
+$mobile-landscape-max: $tablet-min - 1; // mobile landscape mode max
+$mobile-portrait-max: $mobile-landscape-min - 1; // mobile portrait mode max
+$mobile-xsmall-max: 410px; // extra small mobile devices
+
+/// Mobile, including tablet.
+/// @content inside media query
+@mixin mobile {
+    @media screen and (max-width: #{$mobile-max}) {
+        @content;
+    }
+}
+
+/// Extra-small mobile devices.
+/// @content inside media query
+@mixin mobile-xsmall {
+    @media screen and (max-width: $mobile-xsmall-max) {
+        @content;
+    }
+}
+
+/// Only mobile, excluding tablet./// @content inside media query
+@mixin mobile-only {
+    @media screen and (max-width: #{$mobile-landscape-max}) {
+        @content;
+    }
+}
+
+/// Mobile in portrait mode.
+/// @content inside media query
+@mixin mobile-portrait-only {
+    @media screen and (max-width: #{$mobile-max}) and (orientation: portrait) {
+        @content;
+    }
+}
+
+/// Mobile in landscape mode.
+/// @content inside media query
+@mixin mobile-landscape-only {
+    @media screen and (max-width: #{$mobile-max}) and (orientation: landscape) {
+        @content;
+    }
+}
+
+/// Device in landscape mode.
+/// @content inside media query
+@mixin device-landscape {
+    @media screen and (orientation: landscape) {
+        @content;
+    }
+}
+
+/// Device in portrait mode.
+/// @content inside media query
+@mixin device-portrait {
+    @media screen and (orientation: portrait) {
+        @content;
+    }
+}
+
+/// Tablet only, in landscape mode. Excludes mobile and desktop.
+/// @content inside media query
+@mixin tablet-landscape-only {
+    @media screen and (min-width: #{$tablet-min}) and (max-width: #{$tablet-max}) and (orientation: landscape) {
+        @content;
+    }
+}
+
+/// Tablet only, in portrait mode. Excludes mobile and desktop.
+/// @content inside media query
+@mixin tablet-portrait-only {
+    @media screen and (min-width: #{$tablet-min}) and (max-width: #{$tablet-max}) and (orientation: portrait) {
+        @content;
+    }
+}
+
+/// Tablet and above, including desktop.
+/// @content inside media query
+@mixin tablet {
+    @media screen and (min-width: #{$tablet-min}) {
+        @content;
+    }
+}
+
+/// Tablet only, excluding mobile-only and desktop.
+/// @content inside media query
+@mixin tablet-only {
+    @media screen and (min-width: #{$tablet-min}) and (max-width: #{$tablet-max}) {
+        @content;
+    }
+}
+
+/// Only desktop.
+/// @content inside media query
+@mixin desktop {
+    @media screen and (min-width: #{$desktop-min}) {
+        @content;
+    }
+}
+
+/// Small desktop, excluding desktop-large, tablet, and mobile.
+/// @content inside media query
+@mixin desktop-small {
+    @media screen and (min-width: #{$desktop-min}) and (max-width: #{$desktop-max}) {
+        @content;
+    }
+}
+
+/// Large desktop, excluding desktop-small, tablet, and mobile.
+/// @content inside media query
+@mixin desktop-large {
+    @media screen and (min-width: #{$desktop-max}) {
+        @content;
+    }
+}
+
+/// Extra-large desktop, excluding desktop-small, tablet, and mobile.
+/// @content inside media query
+@mixin desktop-xlarge {
+    @media screen and (min-width: 1440px) {
+        @content;
+    }
+}

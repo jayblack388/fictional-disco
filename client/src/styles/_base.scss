@@ -1,0 +1,92 @@
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background: inherit; // override bootstrap
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 1.6rem;
+}
+
+// We style starting at app-wrapper, so make sure
+// the BG colors and such stretch full height
+body,
+html,
+body>#root,
+#app-wrapper {
+    height: 100%;
+
+    // // Allow <main /> to stretch to fill space on short pages
+    // display: flex;
+    // flex-direction: column;
+}
+
+main {
+    background-color: #fff;
+    // Stretch to fill space on short pages
+    // flex: 1 0 auto;
+}
+
+h1,
+.h1 {
+    font-size: 4rem;
+}
+
+h2,
+.h2 {
+    font-size: 3.2rem;
+}
+
+h3,
+.h3 {
+    font-size: 2.8rem;
+}
+
+h4,
+.h4 {
+    font-size: 2.4rem;
+}
+
+h5,
+.h5 {
+    font-size: 2rem;
+}
+
+h6,
+.h6 {
+    font-size: 1.6rem;
+}
+
+button {
+    border: none;
+    border-radius: 0.4rem !important;
+    outline: none !important;
+
+    &:focus {
+        border: none;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+.btn,
+.box-link,
+.box-btn,
+.dropdown-menu {
+    font-size: inherit;
+}
+
+.nowrap-ellipsis {
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-right: 1rem;
+    max-width: 100%;
+}
+
+@include mobile-xsmall {
+    .xs-hide {
+        display: none;
+    }
+}
