@@ -5,36 +5,44 @@ $success: #accdc5 !default;
 $danger: #dc3545 !default;
 $warning: #f3993f !default;
 $info: #17a2b8 !default;
-$dark: #1b374f !default;
+$dark: #08010c !default;
 $light: #f8f8f8 !default;
 $link: #006cff !default;
 $border: #cccccc !default;
 $border-light: #ebebeb !default;
 
-$font: (style: sans-serif,
-base: 1,
-unit: "rem",
-color-body: $dark,
-weights: (thin: 100,
-extra-light: 200,
-light: 300,
-regular: 400,
-medium: 500,
-semi-bold: 600,
-bold: 700,
-extra-bold: 800,
-black: 900),
-sizes: (xXXLarge: 2.5rem,
-xXLarge: 2rem,
-xLarge: 1.75rem,
-large: 1.5rem,
-medium: 1.125rem,
-regular: 1rem,
-small: 0.875rem,
-xSmall: 0.75rem),
-line-heights: (xLarge: 2.5,
-large: 2,
-medium: 1.5,
-regular: 1.5,
-small: 1,
-xSmall: 1)) !default;
+$font: (
+  style: sans-serif,
+  base: 1,
+  unit: "rem",
+  color-body: $dark,
+  weights: (
+    thin: 100,
+    extra-light: 200,
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semi-bold: 600,
+    bold: 700,
+    extra-bold: 800,
+    black: 900
+  ),
+  sizes: (
+    xXXLarge: 2.5rem,
+    xXLarge: 2rem,
+    xLarge: 1.75rem,
+    large: 1.5rem,
+    medium: 1.125rem,
+    regular: 1rem,
+    small: 0.875rem,
+    xSmall: 0.75rem
+  ),
+  line-heights: (
+    xLarge: 2.5,
+    large: 2,
+    medium: 1.5,
+    regular: 1.5,
+    small: 1,
+    xSmall: 1
+  )
+) !default;

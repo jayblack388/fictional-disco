@@ -1,0 +1,51 @@
+.jb-tabs {
+  .jb-tablist {
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid lighten($border, 10%) !important;
+    display: flex;
+    padding-left: 0;
+    font-size: 1.4rem;
+  }
+  .jb-tab {
+    cursor: pointer;
+    padding: 0 1rem;
+    list-style: none;
+    margin-right: 1rem;
+    white-space: nowrap;
+    &.active {
+      font-weight: 700;
+      border-bottom: 2px solid $dark;
+    }
+  }
+}
+@include mobile-only {
+  .jb-tabs {
+    background: $light;
+    > * {
+      background: white;
+    }
+    .jb-tablist {
+      justify-content: space-between;
+      border-bottom: 1px solid $border;
+    }
+    .jb-tab {
+      margin: 0;
+      padding: 1.2rem 0.5rem 0.6rem;
+      font-weight: 700;
+      &.active {
+        color: $link;
+        border-bottom-color: $link;
+      }
+    }
+    .jb-tabpanel {
+      &.active {
+        padding: 1.5rem 2rem;
+        border: 1px solid $border;
+        @include mobile-xsmall {
+          padding: 1.5rem 1rem;
+        }
+      }
+    }
+  }
+}
