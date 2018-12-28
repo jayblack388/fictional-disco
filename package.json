@@ -20,7 +20,10 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.5.0",
-    "nodemon": "^1.11.0"
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "nodemon": "^1.11.0",
+    "prettier": "^1.15.3"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
