@@ -1,0 +1,17 @@
+.jb-navbar {
+  display: flex;
+  align-items: center;
+  a {
+    border: 0 !important;
+  }
+  .brand-btn {
+    padding: 0 !important;
+    height: 6rem;
+    width: 6rem;
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+}

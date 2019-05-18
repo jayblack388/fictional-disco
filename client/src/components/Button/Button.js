@@ -59,9 +59,13 @@ const Button = props => {
         {
           color: props.textColor
             ? props.textColor
-            : props.dark ? colors.light : colors.dark,
+            : props.dark
+            ? colors.light
+            : colors.dark,
           borderColor: props.borderColor ? props.borderColor : background,
           backgroundColor: background,
+          padding: Theme.buttons.padding,
+          // TODO -> Move these style to a btn class to be shared with links (btn-fade?)
           ":hover": {
             backgroundColor: color(background).darken(0.15),
             borderColor: color(background).darken(0.15),
